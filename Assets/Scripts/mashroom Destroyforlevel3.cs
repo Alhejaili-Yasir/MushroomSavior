@@ -50,9 +50,9 @@ public class MashroomCollector : MonoBehaviour
             Destroy(other.gameObject);
             MashroomSound.Play();
         }
-        else if (other.gameObject.CompareTag("Enemy"))
+        else if (other.gameObject.CompareTag("Lose"))
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("NewLose");
         }
         CheckMashroomCollection();
     }

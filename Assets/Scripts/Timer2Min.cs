@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 60; 
     public Text timerText;
     public AudioSource TimeIncrease;
-
+    public AudioSource TimeDecrease;
     private bool timerRunning = true;
 
     void Update()
@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
     void TimerEnded()
     {
         Debug.Log("Timer has ended!");
-        SceneManager.LoadScene("lose"); 
+        SceneManager.LoadScene("NewLose"); 
     }
 
     void OnTriggerEnter(Collider other)
@@ -51,5 +51,10 @@ public class Timer : MonoBehaviour
             TimeIncrease.Play();
 
         }
+        else if (other.CompareTag("Enemy"))
+        {
+                       timeRemaining -= 10;
+                       TimeDecrease.Play();
+           }
     }
 }
