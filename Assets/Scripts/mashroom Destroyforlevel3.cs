@@ -61,7 +61,7 @@ public class MashroomCollector : MonoBehaviour
     {
         if (GreenMashroomCount == 6 && RedMashroomCount == 6 && BlueMashroomCount == 4)
         {
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene("NewWin");
         }
 
         if (GreenMashroomCount == 6 && RedMashroomCount == 6 && BlueMashroomCount == 4 && SmurfCount == 4)
