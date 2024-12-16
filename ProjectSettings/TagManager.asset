@@ -20,6 +20,9 @@ TagManager:
   - timeincrease
   - Smurf
   - Lose
+  - Enemy1
+  - heal
+  - Heal
   layers:
   - Default
   - TransparentFX
